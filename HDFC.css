@@ -1,0 +1,288 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to right, #E31E24 0%, #E31E24 85%, #1B3A6B 85%, #1B3A6B 100%);
+    color: white;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    justify-content: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: white;
+    color: #1B3A6B;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 15px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.secondary-nav a {
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.secondary-nav a:hover {
+    color: #E31E24;
+}
+
+.help-link,
+.locate-link {
+    color: #0066CC;
+    font-weight: 500;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: white;
+    padding: 15px 50px;
+    font-size: 13px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #E31E24;
+}
+
+.breadcrumb span {
+    margin: 0 8px;
+}
+
+.breadcrumb .current {
+    color: #E31E24;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #E8F4F8 0%, #D6E9F0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background: #FF5722;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover {
+    background: #E64A19;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+    max-width: 20%;
+}
+
+.hero-image img {
+    max-width: 750px;
+    width: 100%;
+    height: auto;
+}
+
+/* Tab Navigation */
+.tab-nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-nav a {
+    color: #666;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-nav a:hover {
+    color: #E31E24;
+}
+
+.tab-nav a.active {
+    color: #E31E24;
+    border-bottom-color: #E31E24;
+}
+
+/* Content Section */
+.content {
+    padding: 60px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-image {
+        margin-top: 40px;
+        justify-content: center;
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+    
+    .secondary-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav,
+    .secondary-nav,
+    .breadcrumb,
+    .hero,
+    .content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .main-nav {
+        display: none;
+    }
+    
+    .tab-nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+    
+    .tab-nav a {
+        white-space: nowrap;
+        padding: 15px 20px;
+    }
+}
